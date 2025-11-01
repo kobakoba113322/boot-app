@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slit-start-Prediction</title>
+    <link rel="stylesheet" href="slit-style.css">
+</head>
+<body>
+    <div class="slit-container">
+       <div class="slit-disply">
+         <!-- 船の番号クリックしたら順番が入れ替えられる仕様にする -->
+            <div class="slit-header">
+                <h3>枠番</h3>
+                <h3 id ="left-go">全体</h3>
+                <ul class="number1">
+                    <li><div class="carten"></div><span class="index">1艇</span><img src="../img/boat1.png" alt="boat1.png"></li>
+                    <li><div class="carten"></div><span class="index">2艇</span><img src="../img/boat2.png" alt="boat2.png"></li>
+                    <li><div class="carten"></div><span class="index">3艇</span><img src="../img/boat3.png" alt="boat3.png"></li>
+                    <li><div class="carten"></div><span class="index">4艇</span><img src="../img/boat4.png" alt="boat4.png"></li>
+                    <li><div class="carten"></div><span class="index">5艇</span><img src="../img/boat5.png" alt="boat5.png"></li>
+                    <li><div class="carten"></div><span class="index">6艇</span><img src="../img/boat6.png" alt="boat6.png"></li>
+                </ul>
+            </div>
+
+                    <!-- スタートの並びドラック＆ドロップで自由に画像を移動できるようにする -->
+            <div class="slit-start">
+                <ul class="number2">
+                    <li><img src="../img/boat1.png" alt="boat1.png"></li>
+                    <li><img src="../img/boat2.png" alt="boat2.png"></li>
+                    <li><img src="../img/boat3.png" alt="boat3.png"></li>
+                    <li><img src="../img/boat4.png" alt="boat4.png"></li>
+                    <li><img src="../img/boat5.png" alt="boat5.png"></li>
+                    <li><img src="../img/boat6.png" alt="boat6.png"></li>
+                </ul>
+            </div>
+        </div>
+        <bottom id="top">TOP画面</bottom>
+        <bottom id="top-next">NEXT</bottom>
+    </div>
+    <script src="slit.js" defer></script>
+</body>
+</html>

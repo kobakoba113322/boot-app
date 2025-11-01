@@ -1,0 +1,165 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background-color: beige;
+  overflow-x: hidden;
+}
+
+/* ===== メイン構成 ===== */
+.main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.back-moniter {
+  position: absolute;
+  inset: 0;
+  background-color: beige;
+  z-index: -1;
+}
+
+/* ===== タイトル ===== */
+.title {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 2.2rem;
+  color: rgba(0, 76, 255, 0.75);
+  text-shadow: 2px 2px 2px rgba(17, 214, 135, 0.8);
+}
+
+/* ===== ボタンエリア ===== */
+.mark-button {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  transition: all 0.3s;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+  box-shadow: none;
+}
+
+/* ===== 画像エリア ===== */
+.turn-area {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.turn-area img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ===== ボート位置 ===== */
+#boat-move {
+  position: absolute;
+  inset: 0;
+}
+
+#boat-move li {
+  position: absolute;
+  list-style: none;
+  cursor: grab;
+  transition: transform 0.1s ease;
+}
+
+#boat-move li:active {
+  cursor: grabbing;
+  transform: scale(1.5);
+}
+
+#boat-move img {
+  width: 60px;
+  height: auto;
+}
+
+/* ボート初期位置（%指定で比率対応） */
+#boat-move li:nth-child(1) { top: 40%; left: 8.1%; }
+#boat-move li:nth-child(2) { top: 47%; left: 8.1%; }
+#boat-move li:nth-child(3) { top: 57%; left: 8.1%; }
+#boat-move li:nth-child(4) { top: 63%; left: 8.1%; }
+#boat-move li:nth-child(5) { top: 77%; left: 8.1%; }
+#boat-move li:nth-child(6) { top: 85%; left: 8.1%; }
+
+/* ===== レスポンシブ対応 ===== */
+
+/* タブレット */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  #boat-move img {
+    width: 45px;
+  }
+}
+
+/* スマホ */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    width: 100px;
+  }
+
+  #boat-move img {
+    width: 35px;
+  }
+}
+@media screen and (min-width: 1025px) {
+    .title {
+    font-size: 3rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  #boat-move img {
+    width: 70px;
+  }
+}
